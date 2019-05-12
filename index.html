@@ -12,13 +12,18 @@
     <div id="main-banner">
         <h1>Plan your next trip!</h1>
     </div>
-    <div>
-        <input id="pac-input" class="controls" type="text" placeholder="Search Box">
-    </div>
-    <div id="map">
-        
+    <h2>Find your holiday destination</h2>
+    <p>Want to find your next holiday destination and see what you can do there? This is the place to be. By selecting a country and a city you get the opportunity to find accomodations, things to do and bars and restaurants. We will even
+    hook you up with a Google Local Guide.</p>
+    <div class="container">
+        <div class="item" id="choosecountry">
+            <h2>First choose a country:</h2>
+        </div> 
+        <div class="item" id="map">
+        </div>
     </div>
     <script type="text/javascript" src="js/main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxxdNYSDzAchcGp0ZnGmHAOFFT4E1neXs&libraries=places&callback=initAutocomplete" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxxdNYSDzAchcGp0ZnGmHAOFFT4E1neXs&libraries=places&callback=initMap" async defer></script>
 </body>
 </html>
