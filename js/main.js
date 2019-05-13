@@ -1,5 +1,6 @@
 var map, places;
 var markers = [];
+var countryRestrict = {'country': 'ie'};
 
 var countries = {
   'al': {
@@ -83,7 +84,7 @@ var countries = {
     zoom: 5
   },
   'ie': {
-    center: {lat: 53.3058362, lng: -12.7021322},
+    center: {lat: 53.5815395, lng: -6.843426},
     zoom: 6
   },
   'it': {
@@ -194,15 +195,13 @@ var countries = {
 
 function initMap() {
   map = new google.maps.Map(document.getElementById('map'), {
-    center: {lat: 48.220778, lng: 16.3100205},
-    zoom: 3
+    zoom: countries['ie'].zoom,
+    center: countries['ie'].center,
   });
 }
 
 function selectCountry() {
   var country = document.getElementById('country').value;
-  if (country == 'value'){
-    map.setCenter(countries[country].center);
-    map.setZoom(countries[country].zoom);
-  }
+  map.setCenter(countries[country].center);
+  map.setZoom(countries[country].zoom);
 }
